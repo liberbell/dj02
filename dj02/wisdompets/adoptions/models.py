@@ -11,3 +11,7 @@ class Pet(models.Model):
     sex = models.CharField(choices=SEX_CHOICES, max_length=1, blank=True)
     submission_date = models.DateTimeField()
     age = models.IntegerField(null=True)
+    vaccinations = models.ManyToManyField()
+
+class Vaccine(models.Model):
+    name = models.CharField(max_length=50)
