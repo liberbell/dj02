@@ -5,5 +5,5 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse('<p>home view</p>')
 
-def pet_detail(request):
-    return HttpResponse('<p>detail view</p>')
+def pet_detail(request, id):
+    return HttpResponse('<p>detail view with the id {}</p>'.format(id))
