@@ -21,5 +21,6 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    url(r'^adoptions/(\d+)/', views.pet_detail, name='pet_detail'),
+    # url(r'^adoptions/(\d+)/', views.pet_detail, name='pet_detail'),
+    path('adoptions/<int:id>', views.pet_detail, name='pet_detail')
 ]
