@@ -11,7 +11,7 @@ def home(request):
 def pet_detail(request, id):
     try:
         pet = Pet.objects.get(id=id)
-    except PetDoesNotExists:
+    except Pet.DoesNotExists:
         raise Http404('Pet not found')
     # return HttpResponse('<p>detail view with the id {}</p>'.format(id))
 
