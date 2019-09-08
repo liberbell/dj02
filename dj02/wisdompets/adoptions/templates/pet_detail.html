@@ -1,1 +1,15 @@
 pet detail
+<p>detail view with the id {}</p>'.format(id)
+<div class="">
+  <h3>{{ pet.name|capfirst }}</h3>
+  <p>{{ pet.species }}</p>
+  {% if pet.breed %}
+   <p>Breed: {{ pet.breed }}</p>
+  {% endif %}
+  {% if pet.age %}
+   <p>Age: {{ pet.age }}</p>
+  {% endif %}
+  {% if pet.sex %}
+   <p>Sex: {{ pet.sex }}</p>
+  {% endif %}
+</div>
