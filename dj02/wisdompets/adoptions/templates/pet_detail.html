@@ -12,4 +12,13 @@ pet detail
   {% if pet.sex %}
    <p>Sex: {{ pet.sex }}</p>
   {% endif %}
+  {% if pet.vaccinations.all %}
+   <p>Vaccinations for:</p>
+   <ul>
+     {% for vaccination in pet.vaccinations.all %}
+     <li>{{ vaccination.name }}</li>
+   </ul>
+  {% endif %}
+  <p>Submitted by: {{ pet.submitter }}</p>
+  <p>Submitted on: {{ pet.submission_date|date }}</p>
 </div>
